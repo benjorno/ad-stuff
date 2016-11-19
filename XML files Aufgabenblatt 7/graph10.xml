@@ -1,0 +1,46 @@
+<graph>
+   <vertex id="0">
+      <neighbor id="1" weight="6"/>
+      <neighbor id="2" weight="12"/>
+      <neighbor id="4" weight="57"/>
+   </vertex>
+   <vertex id="1">
+      <neighbor id="0" weight="6"/>
+      <neighbor id="3" weight="3"/>
+      <neighbor id="5" weight="90"/>
+      <neighbor id="9" weight="30"/>
+   </vertex>
+   <vertex id="2">
+      <neighbor id="0" weight="12"/>
+      <neighbor id="3" weight="43"/>
+   </vertex>
+   <vertex id="3">
+      <neighbor id="1" weight="3"/>
+      <neighbor id="2" weight="43"/>
+   </vertex>
+   <vertex id="4">
+      <neighbor id="0" weight="57"/>
+   </vertex>
+   <vertex id="5">
+      <neighbor id="1" weight="90"/>
+      <neighbor id="7" weight="68"/>
+      <neighbor id="8" weight="93"/>
+   </vertex>
+   <vertex id="6">
+      <neighbor id="7" weight="8"/>
+      <neighbor id="8" weight="83"/>
+   </vertex>
+   <vertex id="7">
+      <neighbor id="5" weight="68"/>
+      <neighbor id="6" weight="8"/>
+      <neighbor id="8" weight="29"/>
+   </vertex>
+   <vertex id="8">
+      <neighbor id="5" weight="93"/>
+      <neighbor id="6" weight="83"/>
+      <neighbor id="7" weight="29"/>
+   </vertex>
+   <vertex id="9">
+      <neighbor id="1" weight="30"/>
+   </vertex>
+</graph>

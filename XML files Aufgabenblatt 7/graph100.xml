@@ -1,0 +1,500 @@
+<graph>
+   <vertex id="0">
+      <neighbor id="86" weight="7"/>
+      <neighbor id="39" weight="78"/>
+      <neighbor id="57" weight="57"/>
+      <neighbor id="72" weight="94"/>
+      <neighbor id="60" weight="63"/>
+   </vertex>
+   <vertex id="1">
+      <neighbor id="6" weight="67"/>
+      <neighbor id="30" weight="21"/>
+   </vertex>
+   <vertex id="2">
+      <neighbor id="70" weight="2"/>
+      <neighbor id="21" weight="98"/>
+      <neighbor id="59" weight="96"/>
+   </vertex>
+   <vertex id="3">
+      <neighbor id="70" weight="58"/>
+      <neighbor id="40" weight="34"/>
+      <neighbor id="28" weight="76"/>
+   </vertex>
+   <vertex id="4">
+      <neighbor id="87" weight="35"/>
+      <neighbor id="29" weight="73"/>
+   </vertex>
+   <vertex id="5">
+      <neighbor id="84" weight="71"/>
+      <neighbor id="80" weight="46"/>
+      <neighbor id="43" weight="98"/>
+      <neighbor id="46" weight="64"/>
+   </vertex>
+   <vertex id="6">
+      <neighbor id="1" weight="67"/>
+      <neighbor id="39" weight="9"/>
+      <neighbor id="27" weight="25"/>
+      <neighbor id="45" weight="37"/>
+   </vertex>
+   <vertex id="7">
+      <neighbor id="44" weight="56"/>
+   </vertex>
+   <vertex id="8">
+      <neighbor id="49" weight="91"/>
+      <neighbor id="32" weight="90"/>
+      <neighbor id="83" weight="85"/>
+      <neighbor id="95" weight="76"/>
+      <neighbor id="30" weight="37"/>
+   </vertex>
+   <vertex id="9">
+      <neighbor id="49" weight="69"/>
+      <neighbor id="60" weight="70"/>
+   </vertex>
+   <vertex id="10">
+      <neighbor id="11" weight="75"/>
+   </vertex>
+   <vertex id="11">
+      <neighbor id="68" weight="31"/>
+      <neighbor id="21" weight="23"/>
+      <neighbor id="10" weight="75"/>
+   </vertex>
+   <vertex id="12">
+      <neighbor id="43" weight="75"/>
+      <neighbor id="88" weight="95"/>
+   </vertex>
+   <vertex id="13">
+      <neighbor id="97" weight="32"/>
+      <neighbor id="52" weight="12"/>
+      <neighbor id="77" weight="98"/>
+      <neighbor id="74" weight="31"/>
+      <neighbor id="75" weight="37"/>
+   </vertex>
+   <vertex id="14">
+      <neighbor id="80" weight="54"/>
+      <neighbor id="58" weight="8"/>
+   </vertex>
+   <vertex id="15">
+      <neighbor id="19" weight="39"/>
+      <neighbor id="42" weight="98"/>
+   </vertex>
+   <vertex id="17">
+      <neighbor id="51" weight="18"/>
+      <neighbor id="50" weight="41"/>
+      <neighbor id="48" weight="1"/>
+      <neighbor id="77" weight="79"/>
+      <neighbor id="72" weight="74"/>
+      <neighbor id="31" weight="2"/>
+      <neighbor id="91" weight="40"/>
+   </vertex>
+   <vertex id="16">
+      <neighbor id="82" weight="86"/>
+      <neighbor id="40" weight="51"/>
+   </vertex>
+   <vertex id="19">
+      <neighbor id="34" weight="25"/>
+      <neighbor id="97" weight="42"/>
+      <neighbor id="15" weight="39"/>
+   </vertex>
+   <vertex id="18">
+      <neighbor id="32" weight="40"/>
+      <neighbor id="71" weight="13"/>
+      <neighbor id="66" weight="50"/>
+      <neighbor id="29" weight="84"/>
+   </vertex>
+   <vertex id="21">
+      <neighbor id="49" weight="4"/>
+      <neighbor id="2" weight="98"/>
+      <neighbor id="37" weight="75"/>
+      <neighbor id="11" weight="23"/>
+   </vertex>
+   <vertex id="20">
+      <neighbor id="76" weight="60"/>
+      <neighbor id="78" weight="50"/>
+   </vertex>
+   <vertex id="23">
+      <neighbor id="33" weight="85"/>
+      <neighbor id="58" weight="2"/>
+   </vertex>
+   <vertex id="22">
+      <neighbor id="85" weight="33"/>
+      <neighbor id="50" weight="63"/>
+      <neighbor id="64" weight="65"/>
+      <neighbor id="65" weight="17"/>
+      <neighbor id="96" weight="7"/>
+      <neighbor id="89" weight="83"/>
+      <neighbor id="28" weight="33"/>
+   </vertex>
+   <vertex id="25">
+      <neighbor id="64" weight="7"/>
+      <neighbor id="65" weight="37"/>
+      <neighbor id="59" weight="34"/>
+      <neighbor id="91" weight="32"/>
+   </vertex>
+   <vertex id="24">
+      <neighbor id="36" weight="92"/>
+      <neighbor id="67" weight="61"/>
+      <neighbor id="95" weight="40"/>
+      <neighbor id="60" weight="76"/>
+   </vertex>
+   <vertex id="27">
+      <neighbor id="6" weight="25"/>
+   </vertex>
+   <vertex id="26">
+      <neighbor id="55" weight="44"/>
+      <neighbor id="43" weight="13"/>
+   </vertex>
+   <vertex id="29">
+      <neighbor id="48" weight="95"/>
+      <neighbor id="18" weight="84"/>
+      <neighbor id="98" weight="58"/>
+      <neighbor id="4" weight="73"/>
+   </vertex>
+   <vertex id="28">
+      <neighbor id="3" weight="76"/>
+      <neighbor id="48" weight="36"/>
+      <neighbor id="99" weight="90"/>
+      <neighbor id="22" weight="33"/>
+   </vertex>
+   <vertex id="31">
+      <neighbor id="17" weight="2"/>
+      <neighbor id="99" weight="60"/>
+      <neighbor id="42" weight="21"/>
+      <neighbor id="79" weight="30"/>
+   </vertex>
+   <vertex id="30">
+      <neighbor id="1" weight="21"/>
+      <neighbor id="71" weight="43"/>
+      <neighbor id="81" weight="43"/>
+      <neighbor id="8" weight="37"/>
+   </vertex>
+   <vertex id="34">
+      <neighbor id="19" weight="25"/>
+      <neighbor id="78" weight="78"/>
+      <neighbor id="47" weight="84"/>
+      <neighbor id="90" weight="3"/>
+   </vertex>
+   <vertex id="35">
+      <neighbor id="51" weight="31"/>
+      <neighbor id="87" weight="88"/>
+      <neighbor id="38" weight="62"/>
+      <neighbor id="39" weight="8"/>
+      <neighbor id="90" weight="97"/>
+   </vertex>
+   <vertex id="32">
+      <neighbor id="18" weight="40"/>
+      <neighbor id="8" weight="90"/>
+   </vertex>
+   <vertex id="33">
+      <neighbor id="23" weight="85"/>
+   </vertex>
+   <vertex id="38">
+      <neighbor id="35" weight="62"/>
+   </vertex>
+   <vertex id="39">
+      <neighbor id="0" weight="78"/>
+      <neighbor id="35" weight="8"/>
+      <neighbor id="6" weight="9"/>
+   </vertex>
+   <vertex id="36">
+      <neighbor id="51" weight="94"/>
+      <neighbor id="42" weight="88"/>
+      <neighbor id="24" weight="92"/>
+      <neighbor id="79" weight="46"/>
+      <neighbor id="61" weight="24"/>
+   </vertex>
+   <vertex id="37">
+      <neighbor id="21" weight="75"/>
+      <neighbor id="74" weight="45"/>
+   </vertex>
+   <vertex id="42">
+      <neighbor id="69" weight="48"/>
+      <neighbor id="36" weight="88"/>
+      <neighbor id="31" weight="21"/>
+      <neighbor id="15" weight="98"/>
+   </vertex>
+   <vertex id="43">
+      <neighbor id="65" weight="58"/>
+      <neighbor id="5" weight="98"/>
+      <neighbor id="26" weight="13"/>
+      <neighbor id="12" weight="75"/>
+   </vertex>
+   <vertex id="40">
+      <neighbor id="16" weight="51"/>
+      <neighbor id="3" weight="34"/>
+   </vertex>
+   <vertex id="41">
+      <neighbor id="58" weight="85"/>
+      <neighbor id="44" weight="7"/>
+   </vertex>
+   <vertex id="46">
+      <neighbor id="71" weight="22"/>
+      <neighbor id="5" weight="64"/>
+      <neighbor id="58" weight="24"/>
+      <neighbor id="89" weight="93"/>
+      <neighbor id="63" weight="40"/>
+   </vertex>
+   <vertex id="47">
+      <neighbor id="34" weight="84"/>
+   </vertex>
+   <vertex id="44">
+      <neighbor id="52" weight="69"/>
+      <neighbor id="7" weight="56"/>
+      <neighbor id="59" weight="57"/>
+      <neighbor id="79" weight="63"/>
+      <neighbor id="94" weight="82"/>
+      <neighbor id="41" weight="7"/>
+      <neighbor id="75" weight="9"/>
+   </vertex>
+   <vertex id="45">
+      <neighbor id="6" weight="37"/>
+   </vertex>
+   <vertex id="51">
+      <neighbor id="17" weight="18"/>
+      <neighbor id="35" weight="31"/>
+      <neighbor id="80" weight="31"/>
+      <neighbor id="36" weight="94"/>
+   </vertex>
+   <vertex id="50">
+      <neighbor id="17" weight="41"/>
+      <neighbor id="81" weight="76"/>
+      <neighbor id="66" weight="1"/>
+      <neighbor id="53" weight="89"/>
+      <neighbor id="22" weight="63"/>
+   </vertex>
+   <vertex id="49">
+      <neighbor id="21" weight="4"/>
+      <neighbor id="8" weight="91"/>
+      <neighbor id="9" weight="69"/>
+   </vertex>
+   <vertex id="48">
+      <neighbor id="17" weight="1"/>
+      <neighbor id="56" weight="79"/>
+      <neighbor id="29" weight="95"/>
+      <neighbor id="28" weight="36"/>
+   </vertex>
+   <vertex id="55">
+      <neighbor id="54" weight="29"/>
+      <neighbor id="26" weight="44"/>
+   </vertex>
+   <vertex id="54">
+      <neighbor id="84" weight="3"/>
+      <neighbor id="55" weight="29"/>
+      <neighbor id="63" weight="35"/>
+   </vertex>
+   <vertex id="53">
+      <neighbor id="50" weight="89"/>
+   </vertex>
+   <vertex id="52">
+      <neighbor id="86" weight="72"/>
+      <neighbor id="13" weight="12"/>
+      <neighbor id="44" weight="69"/>
+   </vertex>
+   <vertex id="59">
+      <neighbor id="2" weight="96"/>
+      <neighbor id="25" weight="34"/>
+      <neighbor id="44" weight="57"/>
+   </vertex>
+   <vertex id="58">
+      <neighbor id="23" weight="2"/>
+      <neighbor id="41" weight="85"/>
+      <neighbor id="46" weight="24"/>
+      <neighbor id="14" weight="8"/>
+   </vertex>
+   <vertex id="57">
+      <neighbor id="0" weight="57"/>
+      <neighbor id="67" weight="39"/>
+      <neighbor id="76" weight="20"/>
+   </vertex>
+   <vertex id="56">
+      <neighbor id="48" weight="79"/>
+   </vertex>
+   <vertex id="63">
+      <neighbor id="54" weight="35"/>
+      <neighbor id="46" weight="40"/>
+      <neighbor id="62" weight="45"/>
+   </vertex>
+   <vertex id="62">
+      <neighbor id="87" weight="7"/>
+      <neighbor id="86" weight="87"/>
+      <neighbor id="63" weight="45"/>
+   </vertex>
+   <vertex id="61">
+      <neighbor id="36" weight="24"/>
+   </vertex>
+   <vertex id="60">
+      <neighbor id="68" weight="43"/>
+      <neighbor id="0" weight="63"/>
+      <neighbor id="24" weight="76"/>
+      <neighbor id="9" weight="70"/>
+   </vertex>
+   <vertex id="68">
+      <neighbor id="11" weight="31"/>
+      <neighbor id="60" weight="43"/>
+   </vertex>
+   <vertex id="69">
+      <neighbor id="96" weight="10"/>
+      <neighbor id="66" weight="85"/>
+      <neighbor id="42" weight="48"/>
+      <neighbor id="89" weight="31"/>
+      <neighbor id="75" weight="2"/>
+   </vertex>
+   <vertex id="70">
+      <neighbor id="2" weight="2"/>
+      <neighbor id="3" weight="58"/>
+   </vertex>
+   <vertex id="71">
+      <neighbor id="18" weight="13"/>
+      <neighbor id="46" weight="22"/>
+      <neighbor id="30" weight="43"/>
+   </vertex>
+   <vertex id="64">
+      <neighbor id="22" weight="65"/>
+      <neighbor id="25" weight="7"/>
+   </vertex>
+   <vertex id="65">
+      <neighbor id="22" weight="17"/>
+      <neighbor id="25" weight="37"/>
+      <neighbor id="43" weight="58"/>
+      <neighbor id="94" weight="21"/>
+   </vertex>
+   <vertex id="66">
+      <neighbor id="69" weight="85"/>
+      <neighbor id="50" weight="1"/>
+      <neighbor id="18" weight="50"/>
+      <neighbor id="67" weight="65"/>
+      <neighbor id="92" weight="19"/>
+   </vertex>
+   <vertex id="67">
+      <neighbor id="66" weight="65"/>
+      <neighbor id="24" weight="61"/>
+      <neighbor id="57" weight="39"/>
+   </vertex>
+   <vertex id="76">
+      <neighbor id="20" weight="60"/>
+      <neighbor id="57" weight="20"/>
+      <neighbor id="74" weight="75"/>
+   </vertex>
+   <vertex id="77">
+      <neighbor id="17" weight="79"/>
+      <neighbor id="13" weight="98"/>
+   </vertex>
+   <vertex id="78">
+      <neighbor id="34" weight="78"/>
+      <neighbor id="81" weight="12"/>
+      <neighbor id="20" weight="50"/>
+   </vertex>
+   <vertex id="79">
+      <neighbor id="36" weight="46"/>
+      <neighbor id="72" weight="81"/>
+      <neighbor id="44" weight="63"/>
+      <neighbor id="31" weight="30"/>
+   </vertex>
+   <vertex id="72">
+      <neighbor id="17" weight="74"/>
+      <neighbor id="0" weight="94"/>
+      <neighbor id="79" weight="81"/>
+   </vertex>
+   <vertex id="73">
+      <neighbor id="98" weight="85"/>
+      <neighbor id="89" weight="1"/>
+   </vertex>
+   <vertex id="74">
+      <neighbor id="37" weight="45"/>
+      <neighbor id="76" weight="75"/>
+      <neighbor id="13" weight="31"/>
+   </vertex>
+   <vertex id="75">
+      <neighbor id="69" weight="2"/>
+      <neighbor id="13" weight="37"/>
+      <neighbor id="44" weight="9"/>
+   </vertex>
+   <vertex id="85">
+      <neighbor id="22" weight="33"/>
+   </vertex>
+   <vertex id="84">
+      <neighbor id="54" weight="3"/>
+      <neighbor id="5" weight="71"/>
+      <neighbor id="93" weight="86"/>
+   </vertex>
+   <vertex id="87">
+      <neighbor id="35" weight="88"/>
+      <neighbor id="4" weight="35"/>
+      <neighbor id="62" weight="7"/>
+   </vertex>
+   <vertex id="86">
+      <neighbor id="0" weight="7"/>
+      <neighbor id="81" weight="86"/>
+      <neighbor id="52" weight="72"/>
+      <neighbor id="62" weight="87"/>
+   </vertex>
+   <vertex id="81">
+      <neighbor id="50" weight="76"/>
+      <neighbor id="86" weight="86"/>
+      <neighbor id="93" weight="35"/>
+      <neighbor id="78" weight="12"/>
+      <neighbor id="30" weight="43"/>
+   </vertex>
+   <vertex id="80">
+      <neighbor id="51" weight="31"/>
+      <neighbor id="5" weight="46"/>
+      <neighbor id="94" weight="59"/>
+      <neighbor id="14" weight="54"/>
+   </vertex>
+   <vertex id="83">
+      <neighbor id="8" weight="85"/>
+   </vertex>
+   <vertex id="82">
+      <neighbor id="16" weight="86"/>
+   </vertex>
+   <vertex id="93">
+      <neighbor id="84" weight="86"/>
+      <neighbor id="81" weight="35"/>
+      <neighbor id="92" weight="18"/>
+   </vertex>
+   <vertex id="92">
+      <neighbor id="66" weight="19"/>
+      <neighbor id="93" weight="18"/>
+   </vertex>
+   <vertex id="95">
+      <neighbor id="8" weight="76"/>
+      <neighbor id="24" weight="40"/>
+   </vertex>
+   <vertex id="94">
+      <neighbor id="80" weight="59"/>
+      <neighbor id="65" weight="21"/>
+      <neighbor id="44" weight="82"/>
+   </vertex>
+   <vertex id="89">
+      <neighbor id="69" weight="31"/>
+      <neighbor id="22" weight="83"/>
+      <neighbor id="46" weight="93"/>
+      <neighbor id="73" weight="1"/>
+   </vertex>
+   <vertex id="88">
+      <neighbor id="12" weight="95"/>
+   </vertex>
+   <vertex id="91">
+      <neighbor id="17" weight="40"/>
+      <neighbor id="25" weight="32"/>
+   </vertex>
+   <vertex id="90">
+      <neighbor id="34" weight="3"/>
+      <neighbor id="35" weight="97"/>
+   </vertex>
+   <vertex id="98">
+      <neighbor id="29" weight="58"/>
+      <neighbor id="73" weight="85"/>
+   </vertex>
+   <vertex id="99">
+      <neighbor id="28" weight="90"/>
+      <neighbor id="31" weight="60"/>
+   </vertex>
+   <vertex id="96">
+      <neighbor id="69" weight="10"/>
+      <neighbor id="22" weight="7"/>
+   </vertex>
+   <vertex id="97">
+      <neighbor id="19" weight="42"/>
+      <neighbor id="13" weight="32"/>
+   </vertex>
+</graph>

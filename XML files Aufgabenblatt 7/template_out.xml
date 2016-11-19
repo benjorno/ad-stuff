@@ -1,0 +1,14 @@
+<graph>
+   <vertex id="1">
+      <neighbor id="2" weight="7"/>
+      <neighbor id="3" weight="8"/>
+   </vertex>
+   <vertex id="2">
+      <neighbor id="1" weight="7"/>
+      <neighbor id="3" weight="6"/>
+   </vertex>
+   <vertex id="3">
+      <neighbor id="1" weight="8"/>
+      <neighbor id="2" weight="6"/>
+   </vertex>
+</graph>
