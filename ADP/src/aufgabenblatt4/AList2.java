@@ -151,6 +151,7 @@ public class AList2 implements IList {
 		return elemente.length;
 	}
 
+	/*********************************************************************************************/
 	@Override
 	public IList listeMitZufallszahlen(int n) {
 		for (int i = 0; this.size() < n; i++) {
@@ -173,40 +174,22 @@ public class AList2 implements IList {
 				}
 			}
 		}
-		// for (int i = 0; i <= this.elemente.length; i++) {
-		// System.out.println(this.elemente[i].wert);
-		// }
-		// System.out.println(schreiboperationen);
-//		return schreiboperationen;
 	}
 
 	@Override
-	public long insertionSort() {
-		int schreiboperationen = 0;
+	public void insertionSort() {
 		int temp;
-		long tStart;
-		long tDiffL;
-        long tStop;
-
-        tStart = System.nanoTime();
 		for (int i = 1; i < elemente.length; i++) {
 			temp = this.elemente[i].wert;
-			int j = i-1;
+			int j = i - 1;
 			while (j >= 0 && this.elemente[j].wert > temp) {
-				this.elemente[j+1].wert = this.elemente[j].wert;
-				j = j-1;
-				schreiboperationen++;
+				this.elemente[j + 1].wert = this.elemente[j].wert;
+				j = j - 1;
 			}
-			this.elemente[j+1].wert = temp;
-			
+			this.elemente[j + 1].wert = temp;
+
 		}
-		tStop = System.nanoTime();
-        tDiffL = (tStop - tStart) / 1000;
-        return tDiffL;
-//		 for (int i = 0; i <= this.elemente.length; i++) {
-//			 System.out.println(this.elemente[i].wert);
-//		 }
-//		return schreiboperationen;
+
 	}
 
 }

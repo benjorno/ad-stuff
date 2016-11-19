@@ -15,7 +15,7 @@ public interface IList {
   
   public void bubbleSort();
   
-  public long insertionSort();
+  public void insertionSort();
   
   public IList listeMitZufallszahlen(int n );
   //public Element getElemente(int i);
