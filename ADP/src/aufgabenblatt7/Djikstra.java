@@ -3,12 +3,12 @@ package aufgabenblatt7;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Dykstra {
+public class Djikstra {
 	
 	private Graph graph;
 	private Map<Integer, Node> nodes; // For each knot in graph there should be one Node
 	
-	public Dykstra(Graph graph) {
+	public Djikstra(Graph graph) {
 		this.graph = graph;
 		nodes = new HashMap<Integer, Node>();
 	}

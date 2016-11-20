@@ -45,7 +45,7 @@ public class GraphGenerator {
 			System.out.println("N = " + n + ": ArrayGraph:");
 			Graph g = new ArrayGraph();
 			generateRandomGraph(n, g);
-			Dykstra dyk = new Dykstra(g);
+			Djikstra dyk = new Djikstra(g);
 			long time = System.nanoTime();
 			dyk.doDykstra(0);
 			long dtime = System.nanoTime() - time;
@@ -56,7 +56,7 @@ public class GraphGenerator {
 			System.out.println("N = " + n + ": ArrayGraph:");
 			Graph g = new ArrayGraph();
 			generateRandomGraph(n, g);
-			Dykstra dyk = new Dykstra(g);
+			Djikstra dyk = new Djikstra(g);
 			long time = System.nanoTime();
 			dyk.doDykstra(0);
 			long dtime = System.nanoTime() - time;

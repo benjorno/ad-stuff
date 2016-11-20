@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class DykstraTest {
+public class DjikstraTest {
 
 	@Test
 	public void testDykstra() {
@@ -28,7 +28,7 @@ public class DykstraTest {
 		g.addConnection('C', 'D', 12);
 		g.addConnection('D', 'E', 4);
 		
-		Dykstra dykstra = new Dykstra(g);
+		Djikstra dykstra = new Djikstra(g);
 		dykstra.doDykstra('A');
 		
 		assertEquals("", dykstra.getDistanceFrom('A'), 0);
