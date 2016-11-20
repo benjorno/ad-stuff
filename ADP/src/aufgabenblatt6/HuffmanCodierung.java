@@ -16,7 +16,7 @@ public class HuffmanCodierung {
 	private HuffmanBaum baum = null;
 
 	/**
-	 * Verschlüsselt eine Zeichenkette in code
+	 * Verschluesselt eine Zeichenkette in code
 	 * 
 	 * @param text
 	 * @return code
@@ -55,7 +55,7 @@ public class HuffmanCodierung {
 
 		}
 		int laenge;
-		// das letzte byte mit 0 auffuellen wenn nötig
+		// das letzte byte mit 0 auffuellen wenn nï¿½tig
 		while (code.length() % BYTE_LAENGE != 0) {
 			code = code + 0;
 		}
@@ -65,7 +65,7 @@ public class HuffmanCodierung {
 			System.out.println(code);
 		}
 
-		// übertraegt die 0en und 1en in ein byte Array
+		// uebertraegt die 0en und 1en in ein byte Array
 		byte[] array = new byte[laenge];
 		for (int i = 0; i < laenge; i++) {
 			for (int j = 0; j < BYTE_LAENGE; j++) {
@@ -153,7 +153,7 @@ public class HuffmanCodierung {
 			System.out.println(text);
 		}
 
-		// sucht die passenden Zeichen für den Code im Baum
+		// sucht die passenden Zeichen fuer den Code im Baum
 		String zeichenkette = baum.zeichenSuchen(text);
 		return zeichenkette;
 
@@ -168,7 +168,7 @@ public class HuffmanCodierung {
 			                + " get confused by the complexities of his own making. Beauty is more important in computing than"
 			                + " anywhere else in technology because software is so complicated. Beauty is the ultimate defence"
 			                + " against complexity");
-			//erstellt binären Code
+			//erstellt binaeren Code
 			String codeBin = "";
 			for (Byte zahl : array) {
 				codeBin += Integer.toBinaryString((int) zahl);

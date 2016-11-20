@@ -28,7 +28,7 @@ public class HuffmanBaum {
 	}
 
 	/**
-	 * Durchsucht den Baum nach dem Code für den Buchstaben.
+	 * Durchsucht den Baum nach dem Code fuer den Buchstaben.
 	 * 
 	 * @param knoten
 	 * @param buchstabe
@@ -48,7 +48,7 @@ public class HuffmanBaum {
 	}
 
 	/**
-	 * Durchsucht den Baum nach dem Code für den Buchstaben.
+	 * Durchsucht den Baum nach dem Code feur den Buchstaben.
 	 * 
 	 * @param knoten
 	 * @param buchstabe
@@ -61,17 +61,17 @@ public class HuffmanBaum {
 	}
 
 	/**
-	 * Die Methode sucht für eine Codefolge die entsprechenden Zeichen.
+	 * Die Methode sucht fuer eine Codefolge die entsprechenden Zeichen.
 	 * 
 	 * @param text
 	 *            codefolge aus 0 und 1
-	 * @return der entschlüsselte text
+	 * @return der entschluesselte text
 	 */
 	public String zeichenSuchen(String text) {
 		String ergebnis = "";
 		int textPointer = 0;
 		HuffmanKnoten suchKnoten;
-		// durchläuft den Baum nach den Code und fängt wieder von vorne an wenn
+		// durchlaeuft den Baum nach dem Code und faengt wieder von vorne an wenn
 		// ein Blatt erreicht wurde
 		while (textPointer < text.length()) {
 			suchKnoten = wurzel;
