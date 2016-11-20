@@ -9,75 +9,71 @@ import org.junit.Test;
 public class GraphTest {
 
 	@Test
-	public void testAddVertex() {
-		testAddVertexAbstract(new LinkedGraph());
-		testAddVertexAbstract(new ArrayGraph());
+	public void testAddKnot() {
+		testAddKnotAbstract(new ArrayGraph());
+		testAddKnotAbstract(new ArrayGraph());
 	}
 	
-	private void testAddVertexAbstract(Graph g) {
-		g.addVertex(1);
-		assertTrue("", g.hasVertex(1));
-	}
-	
-	@Test
-	public void testRemoveVertex() {
-		testRemoveVertexAbstract(new LinkedGraph());
-		//testRemoveVertexAbstract(new ArrayGraph());
-	}
-	
-	private void testRemoveVertexAbstract(Graph g) {
-		g.addVertex(1);
-		g.removeVertex(1);
-		assertFalse("", g.hasVertex(1));
+	private void testAddKnotAbstract(Graph g) {
+		g.addKnot(1);
+		assertTrue("", g.hasKnot(1));
 	}
 	
 	@Test
-	public void testAddEdge() {
-		testAddEdgeAbstract(new LinkedGraph());
-		testAddEdgeAbstract(new ArrayGraph());
+	public void testRemoveKnot() {
+//		testRemoveKnotAbstract(new ArrayGraph());
 	}
 	
-	private void testAddEdgeAbstract(Graph g) {
-		g.addVertex(1);
-		g.addVertex(2);
-		g.addEdge(1, 2, 7);
-		assertTrue("", g.hasEdge(1, 2));
-		assertTrue("", g.hasEdge(2, 1));
+	private void testRemoveKnotAbstract(Graph g) {
+		g.addKnot(1);
+		g.removeKnot(1);
+		assertFalse("", g.hasKnot(1));
+	}
+	
+	@Test
+	public void testAddConnection() {
+		testAddConnectionAbstract(new ArrayGraph());
+	}
+	
+	private void testAddConnectionAbstract(Graph g) {
+		g.addKnot(1);
+		g.addKnot(2);
+		g.addConnection(1, 2, 7);
+		assertTrue("", g.hasConnection(1, 2));
+		assertTrue("", g.hasConnection(2, 1));
 		assertEquals("", g.getWeightBetween(1, 2), 7);
 		assertEquals("", g.getWeightBetween(2, 1), 7);
 	}
 	
 	@Test
-	public void testRemoveEdge() {
-		testRemoveEdgeAbstract(new LinkedGraph());
-		testRemoveEdgeAbstract(new ArrayGraph());
+	public void testRemoveConnection() {
+		testRemoveConnectionAbstract(new ArrayGraph());
 	}
 	
-	private void testRemoveEdgeAbstract(Graph g) {
-		g.addVertex(1);
-		g.addVertex(2);
-		g.addEdge(1, 2, 7);
-		g.removeEdge(1, 2);
-		assertFalse("", g.hasEdge(1, 2));
-		assertFalse("", g.hasEdge(2, 1));
+	private void testRemoveConnectionAbstract(Graph g) {
+		g.addKnot(1);
+		g.addKnot(2);
+		g.addConnection(1, 2, 7);
+		g.removeConnection(1, 2);
+		assertFalse("", g.hasConnection(1, 2));
+		assertFalse("", g.hasConnection(2, 1));
 	}
 	
 	@Test
 	public void testGetNeighborsOf() {
-		testGetNeighborsOfAbstract(new LinkedGraph());
 		testGetNeighborsOfAbstract(new ArrayGraph());
 	}
 	
 	private void testGetNeighborsOfAbstract(Graph g) {
-		g.addVertex(1);
-		g.addVertex(2);
-		g.addVertex(3);
-		g.addVertex(4);
-		g.addVertex(5);
-		g.addEdge(1, 2, 7);
-		g.addEdge(1, 3, 7);
-		g.addEdge(1, 4, 7);
-		g.addEdge(1, 5, 7);
+		g.addKnot(1);
+		g.addKnot(2);
+		g.addKnot(3);
+		g.addKnot(4);
+		g.addKnot(5);
+		g.addConnection(1, 2, 7);
+		g.addConnection(1, 3, 7);
+		g.addConnection(1, 4, 7);
+		g.addConnection(1, 5, 7);
 		List<Integer> neighbors = g.getNeighborsOf(1);
 		assertEquals("", neighbors.size(), 4);
 		assertTrue("", neighbors.contains(2));
@@ -89,14 +85,13 @@ public class GraphTest {
 	
 	@Test
 	public void testGetWeightBetween() {
-		testGetWeightBetweenAbstract(new LinkedGraph());
 		testGetWeightBetweenAbstract(new ArrayGraph());
 	}
 	
 	private void testGetWeightBetweenAbstract(Graph g) {
-		g.addVertex(1);
-		g.addVertex(2);
-		g.addEdge(1, 2, 19);
+		g.addKnot(1);
+		g.addKnot(2);
+		g.addConnection(1, 2, 19);
 		assertEquals("", g.getWeightBetween(1, 2), 19);
 	}
 

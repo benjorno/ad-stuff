@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 public class ArrayGraph implements Graph {
 
-	//private int[] knotenliste;
+	// private int[] knotenliste;
 	private Map<Integer, Integer> knotenliste;
 	private int[][] adjazenzmatrix;
 	private int maxAnzahl;
@@ -19,7 +19,7 @@ public class ArrayGraph implements Graph {
 		int groesse = 100;
 		maxAnzahl = groesse;
 		anzahl = 0;
-		//knotenliste = new int[groesse];
+		// knotenliste = new int[groesse];
 		knotenliste = new HashMap<Integer, Integer>();
 		adjazenzmatrix = new int[groesse][groesse];
 		for (int i = 0; i < groesse; i++) {
@@ -40,76 +40,70 @@ public class ArrayGraph implements Graph {
 				}
 			}
 		}
-		
+
 		maxAnzahl = size;
 		adjazenzmatrix = tmp;
 	}
 
 	@Override
-	public void addVertex(int vertexId, Map<Integer, Integer> neighbors) {
+	public void addKnot(int knotId, Map<Integer, Integer> neighbors) {
 
-		assert !hasVertex(vertexId) : "Vorbedingung verletzt: !hasVertex(vertexId)";
+		assert !hasKnot(knotId) : "Vorbedingung verletzt: !hasKnot(knotId)";
 
-		addVertex(vertexId);
+		addKnot(knotId);
 		for (int i : neighbors.keySet()) {
-			addEdge(vertexId, i, neighbors.get(i));
+			addConnection(knotId, i, neighbors.get(i));
 		}
 	}
 
 	@Override
-	public void addVertex(int vertexId) {
+	public void addKnot(int knotId) {
 
 		if (anzahl >= maxAnzahl) {
 			resizeArray(maxAnzahl * 2);
 		}
 
-		//knotenliste[anzahl] = vertexId;
-		knotenliste.put(vertexId, anzahl);
+		// knotenliste[anzahl] = knotId;
+		knotenliste.put(knotId, anzahl);
 		anzahl++;
 
 	}
 
 	@Override
-	public boolean hasVertex(int vertexId) {
-		/*boolean hasVertex = false;
-		for (int i = 0; i < anzahl; i++) {
-			if (knotenliste[i] == vertexId) {
-				hasVertex = true;
-			}
-		}
-		return hasVertex;*/
-		return knotenliste.containsKey(vertexId);
+	public boolean hasKnot(int knotId) {
+		return knotenliste.containsKey(knotId);
 	}
 
 	@Override
-	public Set<Integer> getVertices() {
+	public Set<Integer> getKnots() {
 		// Array --> Set
-		/*Set<Integer> ret = new HashSet<>();
-		for (int i : knotenliste) {
-			ret.add(i);
-		}
-
-		return ret;*/
+		/*
+		 * Set<Integer> ret = new HashSet<>(); for (int i : knotenliste) {
+		 * ret.add(i); }
+		 * 
+		 * return ret;
+		 */
 		return knotenliste.keySet();
 	}
 
 	@Override
-	public void removeVertex(int vertexId) {
+	public void removeKnot(int knotId) {
 
-		assert hasVertex(vertexId) : "Vorbedingung verletzt: hasVertex(vertexId)";
+		assert hasKnot(knotId) : "Vorbedingung verletzt: hasKnot(knotId)";
 
 		// not implemented
 	}
 
 	@Override
-	public void addEdge(int vertexId1, int vertexId2, int weight) {
+	public void addConnection(int knotId1, int knotId2, int weight) {
 
-		assert hasVertex(vertexId1) && hasVertex(vertexId2) : "Vorbedingung verletzt: hasVertex(vertexId1) && hasVertex(vertexId2)";
+		assert hasKnot(knotId1)
+				&& hasKnot(knotId2) : "Vorbedingung verletzt: hasKnot(knotId1) && hasKnot(knotId2)";
 		assert weight >= 0 : "Vorbedingung verletzt: weight >= 0";
-		assert !hasEdge(vertexId1, vertexId2);
+		assert !hasConnection(knotId1, knotId2);
 
-		int i = knotenliste.get(vertexId1);
-		int j = knotenliste.get(vertexId2);
+		int i = knotenliste.get(knotId1);
+		int j = knotenliste.get(knotId2);
 		if (i != -1 && j != -1) {
 			adjazenzmatrix[i][j] = weight;
 			adjazenzmatrix[j][i] = weight;
@@ -117,43 +111,40 @@ public class ArrayGraph implements Graph {
 	}
 
 	@Override
-	public boolean hasEdge(int vertexId1, int vertexId2) {
-
-		assert hasVertex(vertexId1) && hasVertex(vertexId2) : "Vorbedingung verletzt: hasVertex(vertexId1) && hasVertex(vertexId2)";
-
-		boolean hasEdge = false;
-		int i = knotenliste.get(vertexId1);
-		int j = knotenliste.get(vertexId2);
+	public boolean hasConnection(int knotId1, int knotId2) {
+		assert hasKnot(knotId1)
+				&& hasKnot(knotId2) : "Vorbedingung verletzt: hasKnot(knotId1) && hasKnot(knotId2)";
+		boolean hasConnection = false;
+		int i = knotenliste.get(knotId1);
+		int j = knotenliste.get(knotId2);
 		if (adjazenzmatrix[i][j] != 0) {
-			hasEdge = true;
+			hasConnection = true;
 		}
-		return hasEdge;
+		return hasConnection;
 	}
 
 	@Override
-	public void removeEdge(int vertexId1, int vertexId2) {
-
-		assert hasEdge(vertexId1, vertexId2);
-
-		int i = knotenliste.get(vertexId1);
-		int j = knotenliste.get(vertexId2);
+	public void removeConnection(int knotId1, int knotId2) {
+		assert hasConnection(knotId1, knotId2);
+		int i = knotenliste.get(knotId1);
+		int j = knotenliste.get(knotId2);
 		adjazenzmatrix[i][j] = 0;
 		adjazenzmatrix[j][i] = 0;
 	}
 
 	@Override
-	public List<Integer> getNeighborsOf(int vertexId) {
+	public List<Integer> getNeighborsOf(int knotId) {
 
-		assert hasVertex(vertexId) : "Vorbedingung verletzt: hasVertex(vertexId)";
+		assert hasKnot(knotId) : "Vorbedingung verletzt: hasKnot(knotId)";
 
 		List<Integer> neighbors = new ArrayList<Integer>();
 
-		int i = knotenliste.get(vertexId);
+		int i = knotenliste.get(knotId);
 		for (int j = 0; j < anzahl; j++) {
 			if (adjazenzmatrix[i][j] != 0) {
-				//neighbors.add(knotenliste.);
+				// neighbors.add(knotenliste.);
 				for (Map.Entry<Integer, Integer> e : knotenliste.entrySet()) {
-					//if (Object.equals(new Integer(j), e.getValue()));
+					// if (Object.equals(new Integer(j), e.getValue()));
 					if (e.getValue().equals(new Integer(j))) {
 						neighbors.add(e.getKey());
 					}
@@ -164,28 +155,12 @@ public class ArrayGraph implements Graph {
 	}
 
 	@Override
-	public int getWeightBetween(int vertexId1, int vertexId2) {
+	public int getWeightBetween(int knotId1, int knotId2) {
 
-		assert hasEdge(vertexId1, vertexId2) : "Vorbedingung verletzt: hasEdge(vertexId1, vertexId2)";
-
-		//int i = findIndex(vertexId1);
-		//int j = findIndex(vertexId2);
-		int i = knotenliste.get(vertexId1);
-		int j = knotenliste.get(vertexId2);
+		assert hasConnection(knotId1, knotId2) : "Vorbedingung verletzt: hasEdge(knotId1, knotId2)";
+		int i = knotenliste.get(knotId1);
+		int j = knotenliste.get(knotId2);
 		return adjazenzmatrix[i][j];
 	}
-
-	//private int findIndex(int vertexId) {
-		//int index = -1;
-		//int i = 0;
-		/*while (index < 0 && i < knotenliste.length) {
-			if (knotenliste[i] == vertexId) {
-				index = i;
-			}
-			i++;
-		}*/
-		//return knotenliste
-		//return index;
-	//}
 
 }

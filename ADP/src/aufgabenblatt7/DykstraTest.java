@@ -8,25 +8,25 @@ public class DykstraTest {
 
 	@Test
 	public void testDykstra() {
-		Graph g = new GraphWrapper(new LinkedGraph());
-		g.addVertex('A');
-		g.addVertex('B');
-		g.addVertex('C');
-		g.addVertex('D');
-		g.addVertex('E');
-		g.addVertex('F');
-		g.addVertex('G');
-		g.addEdge('A', 'B', 4);
-		g.addEdge('A', 'G', 5);
-		g.addEdge('A', 'F', 10);
-		g.addEdge('B', 'G', 2);
-		g.addEdge('G', 'F', 4);
-		g.addEdge('B', 'C', 7);
-		g.addEdge('C', 'G', 1);
-		g.addEdge('G', 'E', 8);
-		g.addEdge('F', 'E', 3);
-		g.addEdge('C', 'D', 12);
-		g.addEdge('D', 'E', 4);
+		Graph g = new GraphWrapper(new ArrayGraph());
+		g.addKnot('A');
+		g.addKnot('B');
+		g.addKnot('C');
+		g.addKnot('D');
+		g.addKnot('E');
+		g.addKnot('F');
+		g.addKnot('G');
+		g.addConnection('A', 'B', 4);
+		g.addConnection('A', 'G', 5);
+		g.addConnection('A', 'F', 10);
+		g.addConnection('B', 'G', 2);
+		g.addConnection('G', 'F', 4);
+		g.addConnection('B', 'C', 7);
+		g.addConnection('C', 'G', 1);
+		g.addConnection('G', 'E', 8);
+		g.addConnection('F', 'E', 3);
+		g.addConnection('C', 'D', 12);
+		g.addConnection('D', 'E', 4);
 		
 		Dykstra dykstra = new Dykstra(g);
 		dykstra.doDykstra('A');

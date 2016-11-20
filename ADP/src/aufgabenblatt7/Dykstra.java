@@ -6,22 +6,22 @@ import java.util.Map;
 public class Dykstra {
 	
 	private Graph graph;
-	private Map<Integer, Node> nodes; // For each Vertex in graph there should be one Node
+	private Map<Integer, Node> nodes; // For each knot in graph there should be one Node
 	
 	public Dykstra(Graph graph) {
 		this.graph = graph;
 		nodes = new HashMap<Integer, Node>();
 	}
 	
-	public void doDykstra(int destinationVertex) {
+	public void doDykstra(int destinationknot) {
 		
-		assert graph.hasVertex(destinationVertex) : "Vorbedingung verletzt: graph.hasVertex(destinationVertex)";
+		assert graph.hasKnot(destinationknot) : "Vorbedingung verletzt: graph.hasknot(destinationknot)";
 		
 		if (graph instanceof GraphWrapper) {
 			((GraphWrapper)graph).resetCounter();
 		}
 		
-		Node activeNode = new Node(destinationVertex, destinationVertex, 0, true);
+		Node activeNode = new Node(destinationknot, destinationknot, 0, true);
 		//	initialize Nodes
 		nodes.clear();
 		nodes.put(activeNode.getId(), activeNode);
@@ -40,7 +40,7 @@ public class Dykstra {
 			
 			//	Alle Randknoten über activeNode neu bewerten
 			for (Node node : randknoten.values()) {
-				if (graph.hasEdge(activeNode.getId(), node.getId())) {
+				if (graph.hasConnection(activeNode.getId(), node.getId())) {
 					int distanceByActiveNode = activeNode.getDistance() + 
 							graph.getWeightBetween(node.getId(), activeNode.getId());
 					if (node.getDistance() > distanceByActiveNode) {
@@ -80,16 +80,16 @@ public class Dykstra {
 		}
 	}
 	
-	public int getDistanceFrom(int startVertex) {
-		if (nodes.containsKey(startVertex)) {
-			return nodes.get(startVertex).getDistance();
+	public int getDistanceFrom(int startknot) {
+		if (nodes.containsKey(startknot)) {
+			return nodes.get(startknot).getDistance();
 		}
 		return -1;
 	}
 	
-	public int getNextStep(int fromVertex) {
-		if (nodes.containsKey(fromVertex)) {
-			return nodes.get(fromVertex).getNextStep();
+	public int getNextStep(int fromknot) {
+		if (nodes.containsKey(fromknot)) {
+			return nodes.get(fromknot).getNextStep();
 		}
 		return -1;
 	}

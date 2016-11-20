@@ -22,143 +22,75 @@ public class GraphWrapper implements Graph {
 	}
 
 	@Override
-	public void addVertex(int vertexId, Map<Integer, Integer> neighbors) {
-		graph.addVertex(vertexId, neighbors);
-
-		if (graph instanceof LinkedGraph) {
+	public void addKnot(int vertexId, Map<Integer, Integer> neighbors) {
+		graph.addKnot(vertexId, neighbors);
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// TODO: inkrement counter
-		}
 	}
 
 	@Override
-	public void addVertex(int vertexId) {
-		graph.addVertex(vertexId);
-
-		if (graph instanceof LinkedGraph) {
+	public void addKnot(int vertexId) {
+		graph.addKnot(vertexId);
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
 	}
 
 	@Override
-	public boolean hasVertex(int vertexId) {
-
-		if (graph instanceof LinkedGraph) {
+	public boolean hasKnot(int vertexId) {
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
-
-		return graph.hasVertex(vertexId);
+		return graph.hasKnot(vertexId);
 	}
 
 	@Override
-	public Set<Integer> getVertices() {
-
-		if (graph instanceof LinkedGraph) {
+	public Set<Integer> getKnots() {
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
-
-		return graph.getVertices();
+		return graph.getKnots();
 	}
 
 	@Override
-	public void removeVertex(int vertexId) {
-
-		if (graph instanceof LinkedGraph) {
-			// O(N) mit N = Anzahl Nachbarn von vertexId
-			counter += 1 + graph.getNeighborsOf(vertexId).size();
-		} else if (graph instanceof ArrayGraph) {
-			// TODO: inkrement counter
-		}
-
-		graph.removeVertex(vertexId);
+	public void removeKnot(int vertexId) {
+		graph.removeKnot(vertexId);
 
 	}
 
 	@Override
-	public void addEdge(int vertexId1, int vertexId2, int weight) {
-
-		if (graph instanceof LinkedGraph) {
+	public void addConnection(int vertexId1, int vertexId2, int weight) {
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
-
-		graph.addEdge(vertexId1, vertexId2, weight);
+		graph.addConnection(vertexId1, vertexId2, weight);
 
 	}
 
 	@Override
-	public boolean hasEdge(int vertexId1, int vertexId2) {
-
-		if (graph instanceof LinkedGraph) {
+	public boolean hasConnection(int vertexId1, int vertexId2) {
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
-
-		return graph.hasEdge(vertexId1, vertexId2);
+		return graph.hasConnection(vertexId1, vertexId2);
 
 	}
 
 	@Override
-	public void removeEdge(int vertexId1, int vertexId2) {
-
-		if (graph instanceof LinkedGraph) {
+	public void removeConnection(int vertexId1, int vertexId2) {
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
-
-		graph.removeEdge(vertexId1, vertexId2);
+		graph.removeConnection(vertexId1, vertexId2);
 
 	}
 
 	@Override
 	public List<Integer> getNeighborsOf(int vertexId) {
-
-		if (graph instanceof LinkedGraph) {
 			// O(1)
-			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(N)
-			counter += graph.getVertices().size();
-		}
-
+			counter += graph.getKnots().size();
 		return graph.getNeighborsOf(vertexId);
 
 	}
 
 	@Override
 	public int getWeightBetween(int vertexId1, int vertexId2) {
-
-		if (graph instanceof LinkedGraph) {
 			// O(1)
 			counter++;
-		} else if (graph instanceof ArrayGraph) {
-			// O(1)
-			counter++;
-		}
-
 		return graph.getWeightBetween(vertexId1, vertexId2);
 
 	}
