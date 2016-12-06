@@ -7,6 +7,12 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class FileGenerator {
 
+	/**
+	 * Erstellen des IP-Files
+	 * @param nlines anzahl der vorhandenen Lines
+	 * @param filename
+	 * @throws FileNotFoundException
+	 */
 	public static void generate(int nlines, String filename)
 			throws FileNotFoundException {
 

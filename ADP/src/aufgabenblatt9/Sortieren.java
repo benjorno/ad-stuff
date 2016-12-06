@@ -1,5 +1,9 @@
 package aufgabenblatt9;
 
+import java.util.List;
+
+import aufgabenblatt4.Element;
+
 /**
  * Klasse fuer die Implementation von Quicksort.
  * 
@@ -13,7 +17,9 @@ public class Sortieren {
 	public long getCounter() {
 		return this.counter;
 	}
-
+	public void setCounter(int count) {
+		this.counter = count;
+	}
 	public synchronized void increaseCounter() {
 		this.counter++;
 	}
@@ -156,9 +162,39 @@ public class Sortieren {
 		// sonst muss es links sein
 		return links;
 	}
-
+	
+	public Integer[] insert(int pos, Integer zahl, Integer[] array) {
+		if (pos >= 0 && array.length >= pos && zahl != null) {
+			Integer[] newArray = new Integer[array.length + 1];
+			int verschiebung = 0;
+			for (int i = 0; i < newArray.length; i++) {
+				if (pos == i) {
+					verschiebung = 1;
+					newArray[i] = zahl;
+				} else {
+					newArray[i + verschiebung] = array[i];
+				}
+			}
+			array = newArray;
+		}
+		return array;
+		// throw new Exception();
+	}
+	
+	public Integer[] listeMitZufallszahlen(int n) {
+		Integer[] liste = new Integer[0];
+		for (int i = 0; liste.length < n; i++) {
+			// this.insert(i, new Element(random.nextInt(n)));
+			liste = insert(i, new Integer((int) (Math.random() * n * n)),liste);
+			// System.out.println(this.elemente[i].wert);
+		}
+		return liste;
+	}
+	
+	
+	
 	public static void main(String[] args) throws Exception {
-		int anzahl = 1000;
+		int anzahl = 10;
 		Integer[] array = new Integer[anzahl];
 		Integer[] array2 = new Integer[anzahl];
 		for (int i = 0; i < anzahl; i++) {
@@ -169,9 +205,9 @@ public class Sortieren {
 			array2[i] = array[i];
 		}
 		System.out.println("Yeah " + array[9] + "  " + array2[9]);
-		// for (int zahl : array) {
-		// System.out.print(zahl + " ");
-		// }
+//		 for (int zahl : array) {
+//		 System.out.print(zahl + " ");
+//		 }
 
 		Sortieren sort = new Sortieren();
 		// long time = System.currentTimeMillis();
@@ -180,5 +216,7 @@ public class Sortieren {
 		long time2 = System.nanoTime() - time;
 		System.out.println("Die vergangene Zeit ist " + time2);
 	}
+	
+
 
 }

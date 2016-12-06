@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		//erstellen einer Weblog Datei
 		try {
-			FileGenerator.generate(1000000, "list");
+			FileGenerator.generate(4, "list");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
