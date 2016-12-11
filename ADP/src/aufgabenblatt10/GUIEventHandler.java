@@ -7,7 +7,7 @@ public class GUIEventHandler implements EventHandler<MouseEvent>{
 	
 	@Override
 	public void handle(MouseEvent event) {
-		System.out.println("IP-Adresse ausgew�hlt.");
+		System.out.println("IP-Adresse ausgewaehlt.");
 	}
 
 }

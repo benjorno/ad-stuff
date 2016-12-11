@@ -34,13 +34,14 @@ public class GUI extends Application {
 
 		final Label label = new Label();
 		// label.setAlignment(Pos.BASELINE_RIGHT);
+		
+		//erstellen einer ViewList mit den IP's 
 		final ListView<String> listView = new ListView<String>(data);
-
+		//erstellen der IP-Liste
 		Set<IPAddress> ips = hashTable.getIPs();
 		for (IPAddress ip : ips) {
 			data.add(ip.toString());
 		}
-
 		listView.setOnMouseClicked(new GUIEventHandler() {
 
 			@Override

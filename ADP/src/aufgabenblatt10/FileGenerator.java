@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class FileGenerator {
 
 	/**
-	 * Erstellen des IP-Files
+	 * Erstellt die Datei mit den IP-Adressen
 	 * @param nlines anzahl der vorhandenen Lines
 	 * @param filename
 	 * @throws FileNotFoundException
@@ -31,6 +31,10 @@ public class FileGenerator {
 
 	}
 
+	/**
+	 * erstellt eine Random-IP
+	 * @return String IP
+	 */
 	private static String randomIP() {
 		String ret = "";
 		//ret += "" + ThreadLocalRandom.current().nextInt(0, 255);
@@ -41,6 +45,10 @@ public class FileGenerator {
 		return ret;
 	}
 	
+	/**
+	 * erstellt eine Random-Zeit
+	 * @return String Time
+	 */
 	private static String randomTime() {
 		String ret = "[" + ThreadLocalRandom.current().nextInt(0, 30);
 		ret += "/" + ThreadLocalRandom.current().nextInt(0, 12);
@@ -52,6 +60,10 @@ public class FileGenerator {
 		return ret;
 	}
 	
+	/**
+	 * erstellt einen Random-Text
+	 * @return String Text
+	 */
 	private static String randomText() {
 		String options[] = {
 			"GET /pics.html HTTP/1.0",
