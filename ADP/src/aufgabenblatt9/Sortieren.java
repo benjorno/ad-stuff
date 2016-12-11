@@ -204,7 +204,7 @@ public class Sortieren {
 		for (int i = 0; i < anzahl; i++) {
 			array2[i] = array[i];
 		}
-		System.out.println("Yeah " + array[9] + "  " + array2[9]);
+//		System.out.println("Yeah " + array[9] + "  " + array2[9]);
 //		 for (int zahl : array) {
 //		 System.out.print(zahl + " ");
 //		 }
